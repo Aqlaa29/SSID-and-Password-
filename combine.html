@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>combine pages</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.0.min.js"></script>
+<style>
+ 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+ 
+}
+
+h1{
+    color: aliceblue;
+}
+
+.center{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.outer{
+  position: relative;
+  margin: 0 50px;
+  background: #664AFF;
+}
+.button{
+  height: 70px;
+  width: 220px;
+  border-radius: 50px;
+}
+.circle{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.outer button, .outer span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.outer button{
+  background: #111;
+  color: #f2f2f2;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  z-index: 9;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.button button{
+  height: 60px;
+  width: 210px;
+  border-radius: 50px;
+}
+.circle button{
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+}
+.outer span{
+  height: 100%;
+  width: 100%;
+  background: inherit;
+}
+.button span{
+  border-radius: 50px;
+}
+.circle span{
+  border-radius: 50%;
+}
+.outer:hover span:nth-child(1){
+  filter: blur(7px);
+}
+.outer:hover span:nth-child(2){
+  filter: blur(14px);
+}
+.outer:hover{
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+@media (max-width: 500px){
+  .center{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .outer{
+    margin: 50px 0;
+  }
+
+}
+
+</style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+  <!-- h1 اخترنا عنوان  با استخدام تاق -->
+
+    
+<h1> لوحة التحكم بالذراع</h1>
+<!-- p اخترنا اسم للفقرة با استخدام تاق  -->
+
+<p>المحرك الاول</p>
+<!-- انشاءناديف بداخله كلاس با اسم-
+   
+range
+يحتوي عدة ديف وكلاسات لتنسيق السلايدر
+اهم جزء هو انشاء رينج عن طريق استخدام تاق input واختيار نوعه range
+بعد ذلك اعطيناه اقل قيمة بصفر واعلى قيمة 180 
+الفاليو يمكن وضعها فارغة او اضافة قيمة افتراضيه 90 
+  
+ <div class="value left">0</div>
+             <div class="value right">180</div>
+
+  
+هذا الكلاس لعمل عدد صفر اقصى اليسار لانها اقل قيمة 
+        180 اوعمل عدد اقصى اليمين 
+
+ليس مهما فقط اضافة 
+  
+الامر ذاته في كل المحركات 
+
+-->
+
+<div class="range">
+
+
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">180</div>
+</div>
+</div>
+<!-- p اخترنا اسم للفقرة با استخدام تاق  -->
+
+<p>المحرك الثاني</p>
+
+<div class="range">
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">
+        0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">
+        180</div>
+</div>
+</div>
+<!-- p اخترنا اسم للفقرة با استخدام تاق  -->
+
+<p>المحرك الثالث</p>
+
+<div class="range">
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">
+        0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">
+        180</div>
+</div>
+</div>
+<!-- p اخترنا اسم للفقرة با استخدام تاق  -->
+
+<p>المحرك الرابع</p>
+
+<div class="range">
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">
+        0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">
+        180</div>
+</div>
+</div>
+<!-- p اخترنا اسم للفقرة با استخدام تاق  -->
+
+<p>المحرك الخامس</p>
+
+<div class="range">
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">
+        0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">
+        180</div>
+</div>
+</div>
+
+<!-- p اخترنا اسم للفقرة با استخدام تاق  -->
+
+<p>المحرك السادس</p>
+
+<div class="range">
+<div class="sliderValue">
+    <span>180</span>
+</div>
+<div class="field">
+    <div class="value left">
+        0</div>
+    <input type="range" min="0" max="180" value="90" >
+    <div class="value right">
+        180</div>
+</div>
+</div>
+<br>
+<button type="button" class=btn> حفظ</button>
+<br>
+<button type="button" class="btn"> تشغيل</button>
+<!-- هنا قمنا با استخدام سكربت لجعل الصفحة تعمل بدينامكية 
+
+عند تحريك الموشر تظهر قيمة المحركات  
+-->
+<script>
+$(document).ready(function () {
+
+    $('input[type="range"]').on('input', function(){
+        var bubble = $(this).parent().parent().find('.sliderValue span');
+        bubble.text($(this).val());
+        bubble.addClass('show');
+        bubble.css('left', $(this).val() / 2 + '%');
+    });
+    
+    $('input[type="range"]').on('blur', function(){
+        $(this).parent().parent().find('.sliderValue span').removeClass('show');
+    });
+
+});
+</script>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<h1>الاتجاهات لقاعدة الروبوت </h1>
+
+<br>
+
+<br>
+<br>
+    <div class="center">
+   
+        <span></span>
+          
+          <table style="width:40%">
+           <tr>
+             <th>  </th>
+             <th>  </th> 
+             <th>  </th>
+           </tr>
+                <tr><td></td>
+             <td>  <div class="center">
+               <div class="outer button">
+               <button>للاعلى</button>
+               <span></span>
+               <span></span>
+               </div>        </td>
+               <td>   </td>
+                 </tr> </div>
+         
+                 <br>
+         
+               <tr>
+             <td></td>  <div class="outer button">
+               <button>لليسار</button>
+               <span></span>
+               <span></span>
+               </div>
+              </div>
+             <br>
+             <br> <br> <br> <br> <br>
+       
+             
+             </td>
+                <td> 
+                 <br><br><br><br>
+       
+                 
+                 <div class="outer circle">
+                   <button>توقف</button>
+                   <span></span>
+                   <span></span>
+                   </div>
+                   </td>
+       
+                <td>
+                  
+                 <br>
+                  <br>
+                  <br>
+                  <br>
+                 <div class="outer button">
+                 <button>لليمين</button>
+                 <span></span>
+                 <span></span>
+                 </div>  
+                  </td>
+                </tr>  </div>
+         
+                 
+                 
+                 <tr>
+       
+       
+                 <td></td>
+             <td>  
+               <br><br><br><br>
+               
+               <div class="outer button">
+               <button>للخلف</button>
+               <span></span>
+               <span></span>
+               </div>
+                 <td> 
+                </td>
+                </tr>
+   
+
+</body>
+</html>
